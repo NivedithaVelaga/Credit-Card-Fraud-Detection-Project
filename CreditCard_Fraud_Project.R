@@ -8,7 +8,7 @@ library(caret)
 library(data.table)
 
 
-creditcard_data <- read.csv("C:\\Users\\lenovo\\Desktop\\DataScience_R\\Credit_Card_Fraud_Project\\creditcard.csv")
+creditcard_data <- read.csv("C:\\Users\\msi\\Desktop\\DataScience_R\\Credit-Card-Fraud-Detection-Project\\creditcard.csv")
 
 ##Data Exploration
 
@@ -101,3 +101,4 @@ plot(model_gbm)
 gbm_test = predict(model_gbm, newdata = test_data, n.trees = gbm.iter)
 gbm_auc = roc(test_data$Class, gbm_test, plot = TRUE, col = "red")
 print(gbm_auc)
+
